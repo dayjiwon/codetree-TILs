@@ -11,6 +11,8 @@ int dfs(int num){
 
     for(int i=1;i<=n;i++){
         if(map[num][i]==true){
+            map[num][i]=false;
+            map[i][num]=false;
             cnt++;
             cnt+=dfs(i);
         }
@@ -26,6 +28,7 @@ int main() {
         int a,b;
         cin>>a>>b;
         map[a][b]=true;
+        map[b][a]=true;
     }
 
     cout<<dfs(1)<<endl;
