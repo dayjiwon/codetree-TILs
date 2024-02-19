@@ -15,7 +15,7 @@ int dfs(int num){
             dfs(i);
         }
     }
-
+    if (num==1) cnt++;
     return cnt;
 }
 
@@ -28,7 +28,7 @@ int main() {
         map[a][b]=true;
     }
 
-    cout<<dfs(1)+1<<endl;
+    cout<<dfs(1)<<endl;
 
     return 0;
 }
