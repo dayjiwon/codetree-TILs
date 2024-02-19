@@ -12,10 +12,10 @@ int dfs(int num){
     for(int i=1;i<=n;i++){
         if(map[num][i]==true){
             cnt++;
-            dfs(i);
+            cnt+=dfs(i);
         }
     }
-    if (num==1) cnt++;
+
     return cnt;
 }
 
